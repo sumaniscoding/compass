@@ -1,11 +1,11 @@
 from fastapi import APIRouter
 
 router = APIRouter(
-    prefix='/auth',
-    tags=['auth'],
+    prefix='/profile',
+    tags=['profile'],
     responses={404: {'description': 'not found'}}
 )
 
 @router.get('/')
-async def login():
-    return "login"
+async def profile():
+    return "profile"

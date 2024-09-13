@@ -1,11 +1,11 @@
 from fastapi import APIRouter
 
 router = APIRouter(
-    prefix='/auth',
-    tags=['auth'],
+    prefix='/jobs',
+    tags=['jobs'],
     responses={404: {'description': 'not found'}}
 )
 
 @router.get('/')
-async def login():
-    return "login"
+async def dashboard():
+    return "dashboard"

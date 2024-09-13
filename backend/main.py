@@ -1,7 +1,9 @@
 from fastapi import FastAPI
 
+from routers import auth, jobs, profile
+
 app = FastAPI()
 
-@app.get('/')
-async def home():
-    return "Hello WOrld!"
+app.include_router(auth.router)
+app.include_router(jobs.router)
+app.include_router(profile.router)
